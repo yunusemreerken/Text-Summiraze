@@ -9,17 +9,7 @@ device = 0 if torch.cuda.is_available() else -1 # device=0 ilk GPU'yu kullanır,
 summarizer = pipeline("summarization", model="facebook/bart-large-cnn", device=device)
 
 # Özetlenecek metin (Türkçe bir model kullanıyorsanız Türkçe metin girin)
-TEXT_TO_SUMMARIZE = """
-
-"The strike hit right in the heart of the city. On Palm Sunday," Ukrainian President Volodymyr Zelensky says in an address following the Sumy strikes.
-
-He says that among those left wounded by the Russian attack is a baby girl who was "born this year".
-
-Zelensky adds that she was injured in the second of the two strikes that "exploded over the street".
-
-Two children were killed in the Russian attacks, and 15 others were injured.
-
-"Only completely deranged scum can do something like this," Zelensky says."""
+TEXT_TO_SUMMARIZE = """Buraya özetlenecek metni girin."""
 
 # Özetleme işlemini yapın
 # max_length: Özetin olabileceği maksimum token sayısı
